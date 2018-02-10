@@ -79,14 +79,16 @@
 
    $(".submit").click(function(){
 
-    // event.preventDefault();
-    $.post("index.js",
-    {
+    var reservation = {
           Name: $("#name").val().trim(),
           Phone: $("#phone").val().trim(),
           Email: $("#email").val().trim(),
           ID: $("#id").val().trim()
-        },
+        };
+
+    // event.preventDefault();
+    $.post("index.js",
+    reservation,
     function(data, status){
         console.log("Data: " + data + "\nStatus: " + status);
     });
