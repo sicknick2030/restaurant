@@ -59,23 +59,38 @@
 
   <script>
   
-console.log("phone" + req.body.phone);
+//console.log("phone" + req.body.phone);
 
-   $(".submit").on("click", function(event) {
+   // $(".submit").on("click", function(event) {
 
-    event.preventDefault();
+   //  event.preventDefault();
 
-      var reservation = {
+   //    var reservation = {
+   //        Name: $("#name").val().trim(),
+   //        Phone: $("#phone").val().trim(),
+   //        Email: $("#email").val().trim(),
+   //        ID: $("#id").val().trim()
+   //      };
+
+   //    console.log(reservation);
+
+   //  }
+//);
+
+   $(".submit").click(function(){
+
+    // event.preventDefault();
+    $.post("index.js",
+    {
           Name: $("#name").val().trim(),
           Phone: $("#phone").val().trim(),
           Email: $("#email").val().trim(),
           ID: $("#id").val().trim()
-        };
-
-      console.log(reservation);
-
-    }
-);
+        },
+    function(data, status){
+        console.log("Data: " + data + "\nStatus: " + status);
+    });
+});
 
 
   </script>
