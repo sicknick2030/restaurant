@@ -11,22 +11,6 @@
  <script src="https://code.jquery.com/jquery.js"></script>
 
   <script src="index.js"></script>
- <!--  <style type="text/css">
-    .jumbotron{
-      background-color: #A9A9A9;
-      color:yellow;
-    }
-
-    .btn{
-      background-color:#C0C0C0;
-    }
-
-    .panel{
-      background-color: #A9A9A9;
-      color:white;
-    }
-
-  </style> -->
 
 </head>
 <body>
@@ -37,7 +21,7 @@
       <br>
       <div class="text-center">
         <a href="/tables"><button type="button" class="btn btn-primary">View Tables</button></a>
-        <a href="/"><button type="button" class="btn btn-primary">Home</button></a>
+        <a href="index.html"><button type="button" class="btn btn-primary">Home</button></a>
       </div>
     </div>
     <div class="row">
@@ -48,7 +32,7 @@
             <h4 class="panel-title">Table Reservation</h4>
           </div>
           <div class="panel-body">
-            <form role="form">
+            <form role="form" method="post">
               <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name">
@@ -75,6 +59,8 @@
 
   <script>
   
+console.log("phone" + req.body.phone);
+
    $(".submit").on("click", function(event) {
 
     event.preventDefault();
